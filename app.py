@@ -1,6 +1,6 @@
 import streamlit as st
 import openai
-openai.api_key = "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"
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 def check_bad_language(text):
     prompt_for_bad_words = "你是一个客户服务质检员，判断输入的文字是否有不良用语，有就回答“是”，没有就回答“否”，不要给出任何多余的答复和标点。"
