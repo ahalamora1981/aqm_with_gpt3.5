@@ -19,7 +19,7 @@ option = st.selectbox(
     ("不良用语", "负面情绪", "投诉")
 )
 
-text_input = st.text_input("")
+text_input = st.text_input("输入要判断的文字：")
 
 if st.button("提交", use_container_width=True):
     if option == "不良用语":
