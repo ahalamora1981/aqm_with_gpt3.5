@@ -19,11 +19,13 @@ st.title("AQM with GPT3.5")
 st.subheader("判断是否有不良用语")
 
 text_input = st.text_input("请输入文本")
-response = check_bad_language(text_input)
 
-if "是" in response:
-    st.write("有不良用语")
-elif "否" in response:
-    st.write("没有不良用语")
-else:
-    st.write("无法识别")
+if st.button("提交"):
+    response = check_bad_language(text_input)
+
+    if "是" in response:
+        st.write("有不良用语")
+    elif "否" in response:
+        st.write("没有不良用语")
+    else:
+        st.write("无法识别")
