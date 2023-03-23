@@ -22,11 +22,11 @@ option = st.selectbox(
 text_input = st.text_input()
 
 if st.button("提交", use_container_width=True):
-    if option = "不良用语":
+    if option == "不良用语":
         prompt = "你是一个客户服务质检员，判断输入的文字是否有不良用语，有就回答“是”，没有就回答“否”，不要给出任何多余的答复和标点。"
-    elif option = "":
+    elif option == "负面情绪":
         prompt = "你是一个客户服务质检员，判断输入的文字是否有负面情绪，有就回答“是”，没有就回答“否”，不要给出任何多余的答复和标点。"
-    elif option = "":
+    elif option == "投诉":
         prompt = "你是一个客户服务质检员，判断输入的文字是否提到投诉，必须是明确提到投诉才算，有就回答“是”，没有就回答“否”，不要给出任何多余的答复和标点。"
         
     response = check(text_input, prompt)
